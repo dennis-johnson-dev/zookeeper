@@ -2,7 +2,7 @@
 #ifndef MONKEY_H
 #define MONKEY_H
 
-#include "Animal.h"
+#include "animal.h"
 using namespace std;
 
 class Monkey : public Animal
