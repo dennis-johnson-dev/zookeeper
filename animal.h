@@ -7,7 +7,7 @@ using namespace std;
 class Animal 
 {
   public: 
-    virtual void talk() const;
+    virtual void talk() const = 0;
 };
 
 #endif
