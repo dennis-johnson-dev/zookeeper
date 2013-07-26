@@ -5,6 +5,7 @@
 #include "animal.h"
 #include "monkey.h"
 #include "birdy.h"
+#include "snake.h"
 #include "zoo.h"
 using namespace std;
 
@@ -23,25 +24,13 @@ int main() {
   // derived class object
   Birdy birdMan;
   // derived class object
-  Birdy birdWoman;
+  Snake snakey;
 
-  // base class pointer
-  Animal *animalPtr = 0;
-  
-  animalPtr = &monkey;
-  zoo.addAnimal(animalPtr);
-
-  animalPtr = &animalOne;  
-  zoo.addAnimal(animalPtr);
-
-  animalPtr = &birdMan;
-  zoo.addAnimal(animalPtr);
-  
-  animalPtr = &birdWoman;
-  zoo.addAnimal(animalPtr);
-
-  animalPtr = &monkey;  
-  zoo.addAnimal(animalPtr);
+  zoo.addAnimal(&animalOne);
+  zoo.addAnimal(&animalTwo);
+  zoo.addAnimal(&monkey);
+  zoo.addAnimal(&monkeyTwo);
+  zoo.addAnimal(&snakey);
 
   zoo.feedingTime();
 
