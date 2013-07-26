@@ -13,10 +13,8 @@ int main() {
   // Create Zoo object
   Zoo zoo;
 
-  // base class object
-  Animal animalOne;
-  // base class object
-  Animal animalTwo;
+  // derived class object
+  Snake snakePliskin; 
   // derived class object
   Monkey monkey;
   // derived class object
@@ -26,8 +24,8 @@ int main() {
   // derived class object
   Snake snakey;
 
-  zoo.addAnimal(&animalOne);
-  zoo.addAnimal(&animalTwo);
+  zoo.addAnimal(&snakePliskin);
+  zoo.addAnimal(&birdMan);
   zoo.addAnimal(&monkey);
   zoo.addAnimal(&monkeyTwo);
   zoo.addAnimal(&snakey);
