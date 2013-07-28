@@ -14,20 +14,20 @@ int main() {
   Zoo zoo;
 
   // derived class object
-  Snake snakePliskin; 
+  Snake snakePliskin("Snake"); 
   // derived class object
-  Monkey monkey;
+  Monkey monkey ("Monkey One");
   // derived class object
-  Monkey monkeyTwo;
+  Monkey monkeyTwo ("Monkey Two");
   // derived class object
-  Birdy birdMan;
+  Birdy birdMan("Bird");
   // derived class object
-  Snake snakey;
+  Snake snakey("Snake Two");
 
-  zoo.addAnimal(&snakePliskin);
-  zoo.addAnimal(&birdMan);
   zoo.addAnimal(&monkey);
+  zoo.addAnimal(&snakePliskin);
   zoo.addAnimal(&monkeyTwo);
+  zoo.addAnimal(&birdMan);
   zoo.addAnimal(&snakey);
 
   zoo.feedingTime();
