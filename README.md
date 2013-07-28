@@ -20,6 +20,8 @@ To execute the program - $g++ *.cpp;./a.out
 Program shows menu for user to navigate:
 
 addAnimal
+
 removeAnimal(needs to be implemented)
+
 feedingTime - each animal outputs a phrase specific to it along with its name
 exit
