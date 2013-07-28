@@ -5,8 +5,7 @@
 #include <string>
 using namespace std;
 
-Monkey::Monkey(string animalName) {
-  Animal::setName(animalName);
+Monkey::Monkey() {
   Animal::setType("Monkey");
 }
 

@@ -12,24 +12,69 @@ using namespace std;
 int main() {
   // Create Zoo object
   Zoo zoo;
+ 
+  // loop condition  
+  bool continueSession = true;
+  char input;
+  
+  while (continueSession) {
+    // Output menu options
+		cout << "What would you like to do?" << endl;
+		cout << "(a) Add animal" << endl;
+		cout << "(b) Remove animal" << endl;
+		cout << "(c) FeedingTime!" << endl;
+    cout << "(e) Exit" << endl;
+    // get input from the user to select option
+    cin >> input;
 
-  // derived class object
-  Snake snakePliskin("Snake"); 
-  // derived class object
-  Monkey monkey ("Monkey One");
-  // derived class object
-  Monkey monkeyTwo ("Monkey Two");
-  // derived class object
-  Birdy birdMan("Bird");
-  // derived class object
-  Snake snakey("Snake Two");
+    cout << "\n";
 
-  zoo.addAnimal(&monkey);
-  zoo.addAnimal(&snakePliskin);
-  zoo.addAnimal(&monkeyTwo);
-  zoo.addAnimal(&birdMan);
-  zoo.addAnimal(&snakey);
+    // declare variables for use in menu function
+    Animal * animalPtr;
+    string addAnimalName;
+    char typeAnimal;
 
-  zoo.feedingTime();
+    // implement functionality of each choice
+    switch(input) {
+      case 'a':
+        cout << "Please select which animal to add:" << endl; 
+        // Display all available Animal types
+        cout << "(a) Birdy" << endl;
+        cout << "(b) Monkey" << endl;
+        cout << "(c) Snake" << endl; 
+        // Ask user for choice in options
+        cin >> typeAnimal;
+  
+        cout << "\n";
 
-} 
+        cout << "Please enter the animal's name:" << endl;
+    
+        cin >> addAnimalName;
+        // Add desired animal by declaring dynamic data and sending pointer
+        switch(typeAnimal) {
+          case 'a':
+            animalPtr = new Birdy(); 
+            zoo.addAnimal(animalPtr, addAnimalName);
+            break;
+          case 'b':
+            animalPtr = new Monkey(); 
+            zoo.addAnimal(animalPtr, addAnimalName);
+            break;
+          case 'c':
+            animalPtr = new Snake(); 
+            zoo.addAnimal(animalPtr, addAnimalName);
+            break;
+        }
+        break;
+      case 'b':
+        cout << "Removing animal!" << endl;
+        break;
+      case 'c':
+         zoo.feedingTime();
+         break;
+      case 'e':
+         cout << "Exit!" << endl;
+         continueSession = false;
+    } 
+  }
+} // End Main 

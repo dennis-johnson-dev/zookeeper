@@ -13,7 +13,7 @@ class Zoo {
   public:
     Zoo();
     void feedingTime();
-    void addAnimal(Animal *);
+    void addAnimal(Animal *, string);
     void welcome();
     void setCount();
 

@@ -5,8 +5,7 @@
 #include <string>
 using namespace std;
 
-Birdy::Birdy(string animalName) {
-  Animal::setName(animalName);
+Birdy::Birdy() {
   Animal::setType("Birdy");
 }
 
