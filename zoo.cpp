@@ -15,7 +15,10 @@ Zoo::Zoo(){
 void Zoo::feedingTime(){
   cout << "\nFeeding Time:" << endl; 
   for (int i = 0; i < count; i++) {
-    animals[i]->talk();  
+    cout << animals[i]->getName() << " the " << animals[i]->getType();
+    cout << " says '";
+    animals[i]->talk();
+    cout << "'" << endl;
   }
   cout << "\n";
 }
@@ -24,7 +27,7 @@ void Zoo::addAnimal(Animal * animalPtr) {
   if (count <= 4) { 
 		animals[count] = animalPtr; 
 		count++;
-		cout << "Animal Added" << endl;
+    cout << animalPtr->getName() << " has been added." << endl;
   } else {
     cout << "Zoo is already full!!!" << endl;
   }
