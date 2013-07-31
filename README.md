@@ -12,12 +12,16 @@ Currently only have one function - talk() which each derived class animal implem
 
 USAGE:
 Using gcc version 4.2.1
+
 zookeeper.cpp contains main()
+
 To execute the program - $g++ *.cpp;./a.out
 
 Program shows menu for user to navigate:
 
 addAnimal
-removeAnimal(needs to be implemented)
+
+removeAnimal - (needs to be implemented)
+
 feedingTime - each animal outputs a phrase specific to it along with its name
 exit
