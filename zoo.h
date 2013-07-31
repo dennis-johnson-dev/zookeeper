@@ -13,7 +13,9 @@ class Zoo {
   public:
     Zoo();
     void feedingTime();
+    void list();
     void addAnimal(Animal *, string);
+    void removeAnimal(Animal *);
     void welcome();
     void setCount();
 

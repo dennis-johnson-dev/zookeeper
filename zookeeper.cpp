@@ -33,6 +33,7 @@ int main() {
     Animal * animalPtr;
     string addAnimalName;
     char typeAnimal;
+    int selectAnimal;
 
     // implement functionality of each choice
     switch(input) {
@@ -67,14 +68,24 @@ int main() {
         }
         break;
       case 'b':
-        cout << "Removing animal!" << endl;
+        cout << "Which animal do you want to remove?" << endl;  
+        zoo.list();
+
+        cin >> selectAnimal;
+
+        switch(selectAnimal) {
+          case 1:
+            zoo.removeAnimal();
+            cout << "Animal is removeed" << endl;  
+            break;
+        }
         break;
       case 'c':
-         zoo.feedingTime();
-         break;
+        zoo.feedingTime();
+        break;
       case 'e':
-         cout << "Exit!" << endl;
-         continueSession = false;
+        cout << "Exit!" << endl;
+        continueSession = false;
     } 
   }
 } // End Main 

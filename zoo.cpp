@@ -24,6 +24,14 @@ void Zoo::feedingTime(){
   }
 }
 
+void Zoo::list(){
+  if (animals[0] != NULL) { // make sure list isn't empty
+    for (int i = 0; i < count; i++) {
+      cout << (i+1) << ") " << animals[i]->getName() << " the " << animals[i]->getType() << "\n" << endl;
+    } 
+  }
+}
+
 void Zoo::addAnimal(Animal * animalPtr, string animalName) {
   if (count <= 4) { 
     animalPtr->setName(animalName);
@@ -33,6 +41,10 @@ void Zoo::addAnimal(Animal * animalPtr, string animalName) {
   } else {
     cout << "Zoo is already full!!!" << endl;
   }
+}
+
+void Zoo::removeAnimal(Animal * animalPtr) {
+
 }
 
 void Zoo::welcome() {
