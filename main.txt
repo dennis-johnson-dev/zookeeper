@@ -1,0 +1,18 @@
+// main.cpp
+#include "animal.h"
+#include "monkey.h"
+#include "zoo.h"
+#include <iostream>
+using namespace std;
+
+int main() {
+  Zoo zoo;
+  
+  Animal * animalPtr;
+  animalPtr = new Monkey(); 
+
+  zoo.animalList.insertAtFront(animalPtr);
+
+  zoo.animalList.print();
+  
+}

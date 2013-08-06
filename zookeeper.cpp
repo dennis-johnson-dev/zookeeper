@@ -34,10 +34,13 @@ int main() {
     string addAnimalName;
     char typeAnimal;
     int selectAnimal;
+    int exit = 0;
 
     // implement functionality of each choice
     switch(input) {
       case 'a':
+        do {
+        exit = 0;
         cout << "Please select which animal to add:" << endl; 
         // Display all available Animal types
         cout << "(a) Birdy" << endl;
@@ -47,45 +50,56 @@ int main() {
         cin >> typeAnimal;
   
         cout << "\n";
-
-        cout << "Please enter the animal's name:" << endl;
     
-        cin >> addAnimalName;
         // Add desired animal by declaring dynamic data and sending pointer
         switch(typeAnimal) {
           case 'a':
             animalPtr = new Birdy(); 
-            zoo.addAnimal(animalPtr, addAnimalName);
             break;
           case 'b':
             animalPtr = new Monkey(); 
-            zoo.addAnimal(animalPtr, addAnimalName);
             break;
           case 'c':
             animalPtr = new Snake(); 
-            zoo.addAnimal(animalPtr, addAnimalName);
             break;
-        }
+          default:
+            cout << "Pleae enter a valid value\n" << endl;
+            exit = 1; 
+            cout << exit << endl;
+            break;
+        } 
+        } while (exit == 1); 
+            
+
+        cout << "Please enter the animal's name:" << endl;
+    
+        cin >> addAnimalName;
+
+        zoo.animalList.insertAtFront(animalPtr, addAnimalName);
         break;
       case 'b':
         cout << "Which animal do you want to remove?" << endl;  
-        zoo.list();
+        zoo.animalList.print();
 
         cin >> selectAnimal;
 
-        switch(selectAnimal) {
-          case 1:
-            zoo.removeAnimal();
-            cout << "Animal is removeed" << endl;  
-            break;
-        }
+        // need to validate user input
+
+        zoo.animalList.removeNode(selectAnimal);
+        cout << "Animal is removed\n" << endl;  
         break;
       case 'c':
-        zoo.feedingTime();
+        cout << "Feeding Time!" << endl;
+        zoo.animalList.print();
+        cout << "\n";
         break;
       case 'e':
-        cout << "Exit!" << endl;
+        cout << "Exit!\n" << endl;
         continueSession = false;
+        break;
+      default:
+        cout << "Please enter a valid value:\n" << endl;
+        break;
     } 
   }
 } // End Main 

@@ -3,25 +3,18 @@
 
 #ifndef ZOO_H
 #define ZOO_H
-
 #include "animal.h"
-#include <string>
+#include "List.h"
 
 using namespace std;
 
 class Zoo {
   public:
     Zoo();
-    void feedingTime();
-    void list();
-    void addAnimal(Animal *, string);
-    void removeAnimal(Animal *);
     void welcome();
-    void setCount();
-
+    List animalList;
+    
   private:
-    int count;
-    Animal * animals[5]; 
 };
 
 #endif
