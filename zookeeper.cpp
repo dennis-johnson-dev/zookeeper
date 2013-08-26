@@ -2,6 +2,7 @@
 // main function for zoo example
 
 #include <iostream>
+#include <string>
 #include "animal.h"
 #include "monkey.h"
 #include "birdy.h"
@@ -72,8 +73,10 @@ int main() {
             
 
         cout << "Please enter the animal's name:" << endl;
-    
-        cin >> addAnimalName;
+     
+        // ignores the '\n' character input from the previous cin
+        cin.ignore(); 
+        getline(cin, addAnimalName);
 
         zoo.animalList.insertAtFront(animalPtr, addAnimalName);
         break;
