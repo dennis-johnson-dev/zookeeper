@@ -14,7 +14,7 @@ int main() {
   // Create Zoo object
   Zoo zoo;
  
-  // loop condition  
+  // program loop condition (program runs until false) 
   bool continueSession = true;
   char input;
   

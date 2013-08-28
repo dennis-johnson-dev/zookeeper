@@ -12,7 +12,10 @@ using namespace std;
 class List
 {
   public:
+    // constructor
     List();
+
+    // ADT operations on linked list
     void insertAtFront(Animal *, string);
     bool removeNode(int);
     bool isEmpty() const;

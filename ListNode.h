@@ -15,6 +15,7 @@ class ListNode
   friend class List;
 
   public:
+    // constructor
     ListNode(Animal*);
     Animal* getData() const;
   private:
